@@ -1,0 +1,34 @@
+﻿{
+  "pillars": [
+    {
+      "id": "unity",
+      "icon": "users",
+      "title": "Unity",
+      "text": "Bring indigenes and non-indigenes together under one inclusive mandate for AMAC Bwari."
+    },
+    {
+      "id": "youth",
+      "icon": "sparkles",
+      "title": "Youth Empowerment",
+      "text": "Skills, mentorship and opportunity for the young people who carry this constituency."
+    },
+    {
+      "id": "jobs",
+      "icon": "briefcase",
+      "title": "Jobs",
+      "text": "Support for small businesses and job creation that reaches every ward."
+    },
+    {
+      "id": "infrastructure",
+      "icon": "road",
+      "title": "Infrastructure",
+      "text": "Roads, water, power and public facilities that serve residents of both councils."
+    },
+    {
+      "id": "representation",
+      "icon": "megaphone",
+      "title": "Non-Indigene Representation",
+      "text": "A real voice and seat at the table for non-indigenes in federal representation."
+    }
+  ]
+}

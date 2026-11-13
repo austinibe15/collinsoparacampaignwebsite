@@ -1,0 +1,3319 @@
+
+/* =====================================================
+   COMRADE COLLINS CHIMAOBI OPARA CAMPAIGN WEBSITE
+   CONSOLIDATED MAIN DESIGN SYSTEM
+   Updated: November 2026
+===================================================== */
+
+/* =====================================================
+   1. DESIGN TOKENS
+===================================================== */
+
+:root {
+    --green: #0a7d33;
+    --green-dark: #065c25;
+    --green-light: #e8f4eb;
+    --white: #ffffff;
+    --red: #c8102e;
+    --ink: #14201a;
+    --muted: #5b6b62;
+    --bg-soft: #f4f8f5;
+    --border: #e3ece6;
+    --radius: 12px;
+    --max: 1120px;
+    --font: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+/* =====================================================
+   2. RESET AND GLOBAL ELEMENTS
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--font);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-name {
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    letter-spacing: -0.035em;
+}
+
+a {
+    color: var(--green-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.section {
+    width: 100%;
+    padding: 65px 20px;
+}
+
+.section-soft {
+    background: var(--bg-soft);
+}
+
+.title {
+    margin-bottom: 14px;
+    color: var(--green-dark);
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.lead {
+    max-width: 780px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--green);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--green);
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+/* =====================================================
+   3. SHARED HEADER AND NAVIGATION
+===================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: var(--white);
+    border-bottom: 3px solid var(--green);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-height: 76px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.brand,
+.site-header .container > a:first-child {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: auto;
+    height: 52px;
+    object-fit: contain;
+}
+
+.brand-text {
+    color: var(--green-dark);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.site-header nav,
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+}
+
+.site-header nav a,
+.nav a {
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.site-header nav a:hover,
+.nav a:hover {
+    color: var(--green);
+}
+
+.site-header nav a[aria-current="page"],
+.nav a[aria-current="page"] {
+    padding-bottom: 4px;
+    color: var(--green);
+    border-bottom: 2px solid var(--green);
+}
+
+.nav-toggle {
+    display: none;
+    padding: 7px 12px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--green);
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.header-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.header-social svg {
+    width: 21px;
+    height: 21px;
+}
+
+.header-whatsapp {
+    background: #25D366;
+    color: #ffffff;
+}
+
+.header-facebook {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.header-social:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* =====================================================
+   4. BUTTONS AND CALLS TO ACTION
+===================================================== */
+
+.cta-row,
+.cta-actions,
+.manifesto-actions,
+.updates-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.cta-row {
+    margin-top: 28px;
+}
+
+.cta-actions,
+.manifesto-actions,
+.updates-actions {
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+.btn-outline {
+    border-color: var(--green);
+    background: transparent;
+    color: var(--green-dark);
+}
+
+.btn-outline:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-red {
+    background: var(--red);
+    color: var(--white);
+}
+
+.btn-red:hover {
+    background: #a50d26;
+    color: var(--white);
+}
+
+/* =====================================================
+   5. SHARED SECTION HEADINGS
+===================================================== */
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h1 {
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.section-heading h2 {
+    margin-bottom: 12px;
+    color: var(--green-dark);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.section-heading p {
+    max-width: 760px;
+    color: var(--muted);
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--green-dark);
+    font-weight: 800;
+    transition: color 0.2s ease;
+}
+
+.text-link:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+/* =====================================================
+   6. HOMEPAGE HERO
+===================================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: var(--max);
+    min-height: 480px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, var(--bg-soft), var(--white));
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 650px;
+}
+
+.hero-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--green);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    color: var(--green-dark);
+    font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    margin-top: 14px;
+    font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+    line-height: 1.3;
+}
+
+.hero-description {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+#slogan {
+    margin-top: 12px;
+    color: var(--red);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.party-slogan {
+    margin-top: 14px;
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+}
+
+#hero-portrait {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: var(--radius);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+.hero-image-caption {
+    display: none;
+}
+
+/* =====================================================
+   7. ABOUT AND WHY-RUNNING SECTIONS
+===================================================== */
+
+.about {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 65px 20px;
+}
+
+.about-content {
+    max-width: 850px;
+    margin-bottom: 24px;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.about > h2 {
+    margin-bottom: 18px;
+    color: var(--green-dark);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+}
+
+.about > p {
+    max-width: 760px;
+    color: var(--muted);
+}
+
+.about-intro-text {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.why-running {
+    width: 100%;
+    padding: 65px 20px;
+    background: var(--bg-soft);
+}
+
+.why-running > .section-heading {
+    max-width: var(--max);
+    margin: 0 auto 30px;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.vision-card {
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--green);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.vision-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background: var(--green-light);
+}
+
+.vision-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.vision-icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--green);
+}
+
+.vision-card h3 {
+    margin-bottom: 10px;
+    color: var(--green-dark);
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.vision-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.vision-number {
+    display: none;
+}
+
+/* =====================================================
+   8. GENERAL HOMEPAGE CONTENT SECTIONS
+===================================================== */
+
+.manifesto,
+.community,
+.join {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 65px 20px;
+}
+
+.manifesto h2,
+.community h2,
+.join h2 {
+    margin-bottom: 14px;
+    color: var(--green-dark);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+}
+
+.manifesto p,
+.community p,
+.join p {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.manifesto,
+.join {
+    max-width: 100%;
+    padding-right: max(20px, calc((100% - var(--max)) / 2));
+    padding-left: max(20px, calc((100% - var(--max)) / 2));
+    background: var(--bg-soft);
+}
+
+.join .btn {
+    margin-top: 22px;
+}
+
+.community {
+    background: var(--white);
+}
+
+.community .text-link {
+    margin-top: 18px;
+}
+
+.updates-preview {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.updates-preview p {
+    max-width: 750px;
+    color: var(--muted);
+}
+
+.updates-preview .text-link {
+    margin-top: 18px;
+}
+
+.contact-preview {
+    width: 100%;
+    padding: 60px 20px;
+    background: var(--bg-soft);
+    text-align: center;
+}
+
+.contact-preview .section-heading {
+    max-width: var(--max);
+    margin: 0 auto 20px;
+}
+
+.contact-preview p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+.contact-preview .btn {
+    margin-top: 22px;
+}
+
+/* =====================================================
+   9. HOMEPAGE SIX-POINT AGENDA CARDS
+===================================================== */
+
+.manifesto-pillars {
+    width: 100%;
+    padding: 75px 20px;
+    background: #f5f8f6;
+}
+
+.manifesto-pillars .section-heading {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: var(--max);
+    margin: 35px auto 0;
+}
+
+.pillar-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 5px 18px rgba(0, 50, 25, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 50, 25, 0.14);
+}
+
+.pillar-image {
+    width: 100%;
+    height: 215px;
+    overflow: hidden;
+    background: var(--green-light);
+}
+
+.pillar-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pillar-card:hover .pillar-image img {
+    transform: scale(1.05);
+}
+
+.pillar-content {
+    position: relative;
+    flex: 1;
+    padding: 24px 22px 26px;
+    text-align: center;
+}
+
+.pillar-content h3 {
+    margin: 0 0 12px;
+    color: var(--green-dark);
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.pillar-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.pillar-icon,
+.pillar-number {
+    display: none !important;
+}
+
+.manifesto-action {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* =====================================================
+   10. COMMUNITY PAGE
+===================================================== */
+
+.community-hero {
+    padding-top: 70px;
+    padding-bottom: 45px;
+}
+
+.community-grid {
+    margin-top: 35px;
+}
+
+.community-card {
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.community-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.community-card .vision-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.community-card h3 {
+    margin-bottom: 12px;
+    color: var(--green-dark);
+}
+
+.community-card p {
+    line-height: 1.75;
+}
+
+.community-unity {
+    background: var(--green-light);
+}
+
+.community-slogan {
+    margin-top: 25px;
+    color: var(--green-dark);
+    line-height: 1.5;
+}
+
+.community-cta {
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    margin-bottom: 15px;
+    color: var(--green-dark);
+}
+
+.cta-content p {
+    margin-bottom: 25px;
+    line-height: 1.75;
+}
+
+/* Community event feature */
+
+.event-feature {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: 0 8px 28px rgba(0, 50, 25, 0.07);
+}
+
+.event-feature-image {
+    width: 100%;
+    min-height: 320px;
+    overflow: hidden;
+    border-radius: 13px;
+    background: var(--green-light);
+}
+
+.event-feature-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+.event-feature-content h3 {
+    margin: 15px 0;
+    color: var(--green-dark);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.event-feature-content p {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+/* Optional event video */
+
+.event-video-section {
+    max-width: 900px;
+    margin: 55px auto 0;
+    text-align: center;
+}
+
+.event-video-heading {
+    margin-bottom: 22px;
+}
+
+.event-video-heading h3 {
+    margin-top: 10px;
+    color: var(--green-dark);
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.event-video-section video {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    border-radius: 16px;
+    background: #111111;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================================
+   11. CONTACT PAGE
+===================================================== */
+
+.contact-hero {
+    padding-top: 70px;
+    padding-bottom: 45px;
+}
+
+.contact-grid {
+    margin-top: 35px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.contact-card h3 {
+    margin-bottom: 12px;
+    color: var(--green-dark);
+}
+
+.contact-card p {
+    flex-grow: 1;
+    margin-bottom: 22px;
+    line-height: 1.75;
+}
+
+.contact-card .btn {
+    margin-top: auto;
+}
+
+.contact-engagement {
+    background: var(--green-light);
+}
+
+.contact-cta {
+    text-align: center;
+}
+
+.contact-slogan {
+    margin-top: 28px;
+    color: var(--green-dark);
+    line-height: 1.5;
+}
+
+/* =====================================================
+   12. FEEDBACK PAGE
+===================================================== */
+
+.feedback-hero {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.feedback-section {
+    background: var(--bg-soft);
+}
+
+.feedback-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 45px;
+}
+
+.feedback-information {
+    padding-top: 15px;
+}
+
+.feedback-information h2,
+.feedback-form-wrapper h2 {
+    margin-bottom: 15px;
+    color: var(--green-dark);
+}
+
+.feedback-information > p,
+.form-intro {
+    margin-bottom: 25px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.feedback-points {
+    display: grid;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.feedback-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.feedback-check {
+    display: flex;
+    flex: 0 0 30px;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.feedback-point h3 {
+    margin-bottom: 5px;
+    color: var(--green-dark);
+    font-size: 1rem;
+}
+
+.feedback-point p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.feedback-form-wrapper {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.feedback-form {
+    width: 100%;
+}
+
+.feedback-form .field {
+    margin-bottom: 20px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feedback-form input:not([type="checkbox"]),
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(10, 125, 51, 0.1);
+}
+
+.feedback-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.feedback-consent .consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.feedback-consent input[type="checkbox"] {
+    flex: 0 0 auto;
+    margin-top: 4px;
+    accent-color: var(--green);
+}
+
+.feedback-form button {
+    width: 100%;
+}
+
+.feedback-closing {
+    text-align: center;
+}
+
+.feedback-slogan {
+    margin: 25px 0;
+    color: var(--green-dark);
+    line-height: 1.5;
+}
+
+/* =====================================================
+   13. GET INVOLVED PAGE
+===================================================== */
+
+.involvement-hero {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.involvement-options {
+    background: var(--bg-soft);
+}
+
+.involvement-card {
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.involvement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.involvement-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.involvement-card h3 {
+    margin-bottom: 12px;
+    color: var(--green-dark);
+}
+
+.volunteer-section {
+    background: var(--white);
+}
+
+.volunteer-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 45px;
+}
+
+.volunteer-information {
+    padding-top: 15px;
+}
+
+.volunteer-information h2,
+.volunteer-form-wrapper h2 {
+    margin-bottom: 15px;
+    color: var(--green-dark);
+}
+
+.volunteer-information > p,
+.volunteer-form-wrapper .form-intro {
+    margin-bottom: 20px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.volunteer-note {
+    margin-top: 30px;
+    padding: 22px;
+    border-radius: var(--radius);
+    background: var(--green-light);
+}
+
+.volunteer-note h3 {
+    margin-bottom: 15px;
+    color: var(--green-dark);
+}
+
+.volunteer-note ul {
+    padding-left: 20px;
+}
+
+.volunteer-note li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.volunteer-form-wrapper {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.volunteer-form .field {
+    margin-bottom: 20px;
+}
+
+.volunteer-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.volunteer-form input:not([type="checkbox"]),
+.volunteer-form select,
+.volunteer-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+}
+
+.volunteer-form input:focus,
+.volunteer-form select:focus,
+.volunteer-form textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(10, 125, 51, 0.1);
+}
+
+.volunteer-form textarea {
+    resize: vertical;
+}
+
+.volunteer-consent .consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.volunteer-consent input[type="checkbox"] {
+    flex: 0 0 auto;
+    margin-top: 4px;
+    accent-color: var(--green);
+}
+
+.volunteer-form button {
+    width: 100%;
+}
+
+.donation-section {
+    background: var(--green-light);
+    text-align: center;
+}
+
+.donation-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.donation-content h2 {
+    margin-bottom: 18px;
+    color: var(--green-dark);
+}
+
+.donation-content p {
+    margin-bottom: 22px;
+    line-height: 1.75;
+}
+
+.donation-note {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.involvement-closing {
+    text-align: center;
+}
+
+.involvement-slogan {
+    margin: 25px 0;
+    color: var(--green-dark);
+    line-height: 1.5;
+}
+
+/* =====================================================
+   14. MANIFESTO PAGE — HERO
+===================================================== */
+
+.manifesto-hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
+    max-width: 100%;
+    min-height: 560px;
+    padding: 75px max(20px, calc((100% - var(--max)) / 2));
+    background: linear-gradient(120deg, #f1f8f3, #ffffff);
+    text-align: left;
+}
+
+.manifesto-hero .hero-text {
+    max-width: 650px;
+}
+
+.manifesto-hero .hero-label {
+    color: var(--green);
+}
+
+.manifesto-hero h1 {
+    margin: 12px 0 18px;
+    color: var(--green-dark);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.12;
+}
+
+.manifesto-hero h2 {
+    margin-top: 12px;
+    color: var(--ink);
+    font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+    line-height: 1.35;
+}
+
+.manifesto-hero h3 {
+    margin-top: 22px;
+    color: var(--green-dark);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.manifesto-hero .hero-description {
+    max-width: 600px;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.manifesto-hero .manifesto-slogan {
+    margin: 14px 0 0;
+    color: var(--green-dark) !important;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.manifesto-hero .party-slogan {
+    margin-top: 8px;
+    color: var(--red);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.manifesto-hero .hero-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 460px;
+    margin-left: auto;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--green-light);
+    box-shadow: 0 18px 40px rgba(0, 50, 25, 0.15);
+}
+
+.manifesto-hero .hero-image img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.manifesto-hero .hero-image-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 30px 20px 18px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.82),
+        rgba(0, 0, 0, 0)
+    );
+    color: var(--white);
+}
+
+.manifesto-hero .hero-image-caption strong {
+    font-size: 1rem;
+}
+
+.manifesto-hero .hero-image-caption span {
+    color: #e1f2e6;
+    font-size: 0.85rem;
+}
+
+/* =====================================================
+   15. MANIFESTO INTRODUCTION
+===================================================== */
+
+.manifesto-introduction {
+    max-width: 100%;
+    padding: 75px 20px;
+    background: var(--white);
+}
+
+.manifesto-introduction .section-heading {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.manifesto-introduction .section-heading p {
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.manifesto-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.manifesto-intro-content p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.manifesto-intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Compatibility with earlier manifesto markup */
+
+.manifesto-narrative {
+    max-width: 900px;
+    margin: 30px auto 0;
+    color: var(--ink);
+    font-size: 1.02rem;
+    line-height: 1.9;
+}
+
+.manifesto-narrative p {
+    margin-bottom: 20px;
+}
+
+.manifesto-highlight {
+    margin-top: 30px;
+    padding: 22px 25px;
+    border-left: 5px solid var(--green);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 1.12rem;
+    font-weight: 700;
+}
+
+/* =====================================================
+   16. MANIFESTO SIX-POINT INFOGRAPHIC
+===================================================== */
+
+.manifesto-pillars#six-point-agenda {
+    padding: 80px 20px;
+    background: var(--bg-soft);
+}
+
+.manifesto-pillars#six-point-agenda .section-heading {
+    max-width: 800px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.manifesto-pillars#six-point-agenda .section-heading p {
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.manifesto-priorities {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.priority-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 175px;
+    padding: 28px 20px;
+    border: 1px solid var(--border);
+    border-bottom: 4px solid var(--green);
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--ink);
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 50, 25, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.priority-item:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--red);
+    color: var(--green-dark);
+    box-shadow: 0 12px 26px rgba(0, 50, 25, 0.1);
+}
+
+.priority-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.priority-item strong {
+    color: var(--green-dark);
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+/* Number labels are intentionally removed from the infographic */
+
+.priority-number {
+    display: none !important;
+}
+
+/* =====================================================
+   17. MANIFESTO PHOTOGRAPHIC PRIORITY SECTIONS
+===================================================== */
+
+.manifesto-detail {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 55px;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 85px 20px;
+}
+
+.manifesto-detail.reverse {
+    grid-template-columns: 1.05fr 0.95fr;
+}
+
+.manifesto-detail.reverse .manifesto-detail-image {
+    order: 2;
+}
+
+.manifesto-detail.reverse .manifesto-detail-content {
+    order: 1;
+}
+
+.manifesto-detail-image {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 350px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--green-light);
+    box-shadow: 0 12px 30px rgba(0, 50, 25, 0.12);
+}
+
+.manifesto-detail-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.manifesto-detail-image:hover img {
+    transform: scale(1.035);
+}
+
+.agenda-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: inline-block;
+    padding: 9px 15px;
+    border-radius: 5px;
+    background: var(--green);
+    color: var(--white);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+.manifesto-detail-content {
+    min-width: 0;
+}
+
+.manifesto-detail-content .section-label {
+    margin-bottom: 12px;
+}
+
+.manifesto-detail-content h2 {
+    margin-bottom: 12px;
+    color: var(--green-dark);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.manifesto-detail-content h3 {
+    margin-bottom: 20px;
+    color: var(--ink);
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.manifesto-detail-content p {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 0.97rem;
+    line-height: 1.85;
+}
+
+.manifesto-detail-content h4 {
+    margin: 25px 0 12px;
+    color: var(--green-dark);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.manifesto-detail-content ul {
+    display: grid;
+    gap: 11px;
+    margin: 0 0 22px;
+    padding-left: 22px;
+}
+
+.manifesto-detail-content li {
+    padding-left: 4px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.manifesto-detail-content li::marker {
+    color: var(--green);
+}
+
+.manifesto-detail-content .manifesto-outcome {
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding: 18px 20px;
+    border-left: 4px solid var(--green);
+    border-radius: 0 8px 8px 0;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.manifesto-outcome strong {
+    color: var(--green-dark);
+}
+
+/* Alternate background for visual separation */
+
+.manifesto-detail:nth-of-type(even) {
+    background: var(--bg-soft);
+}
+
+/* =====================================================
+   18. HOW WE INTEND TO DELIVER
+===================================================== */
+
+.manifesto-delivery {
+    padding: 80px 20px;
+    background: #f0f6f2;
+}
+
+.manifesto-delivery .section-heading {
+    max-width: 800px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.manifesto-delivery .section-heading p {
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.manifesto-delivery .pillars-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.manifesto-delivery .pillar-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 220px;
+    padding: 30px 25px;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--green);
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 5px 18px rgba(0, 50, 25, 0.05);
+    text-align: left;
+}
+
+.manifesto-delivery .pillar-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--red);
+    box-shadow: 0 12px 26px rgba(0, 50, 25, 0.1);
+}
+
+.manifesto-delivery .pillar-card h3 {
+    margin: 0 0 13px;
+    color: var(--green-dark);
+    font-size: 1.12rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.manifesto-delivery .pillar-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+/* Remove numbered icon blocks from delivery cards */
+
+.manifesto-delivery .pillar-icon,
+.manifesto-delivery .pillar-number {
+    display: none !important;
+}
+
+/* =====================================================
+   19. MANIFESTO COMMITMENT
+===================================================== */
+
+.manifesto-commitment {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.manifesto-commitment .section-heading {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.commitment-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.commitment-content p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.commitment-content blockquote {
+    margin: 30px 0;
+    padding: 25px 30px;
+    border-left: 5px solid var(--green);
+    border-radius: 0 10px 10px 0;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.commitment-signature {
+    margin-top: 30px;
+    color: var(--green-dark) !important;
+    font-family: "Manrope", sans-serif;
+    font-size: 1.05rem !important;
+    font-weight: 800;
+}
+
+.commitment-signature span {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-family: var(--font);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* =====================================================
+   20. MANIFESTO FINAL CALL TO ACTION
+===================================================== */
+
+.manifesto-cta {
+    max-width: 100%;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, var(--green-dark), var(--green));
+    color: var(--white);
+    text-align: center;
+}
+
+.manifesto-cta .section-heading {
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+.manifesto-cta .section-label {
+    color: #d9f2df;
+}
+
+.manifesto-cta .section-heading h2 {
+    color: var(--white);
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.manifesto-cta .section-heading p {
+    margin: 0 auto;
+    color: #eaf6ed;
+    line-height: 1.8;
+}
+
+.manifesto-cta .cta-row {
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.manifesto-cta .btn-primary {
+    background: var(--white);
+    color: var(--green-dark);
+}
+
+.manifesto-cta .btn-primary:hover {
+    background: #e8f4eb;
+}
+
+.manifesto-cta .btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.manifesto-cta .btn-outline:hover {
+    background: var(--white);
+    color: var(--green-dark);
+}
+
+.manifesto-cta .party-slogan {
+    margin-top: 25px;
+    color: #ffffff;
+}
+
+/* Compatibility with previous manifesto download sections */
+
+.socio-capital-section {
+    max-width: 1050px;
+}
+
+.socio-capital-heading {
+    max-width: 800px;
+    margin-bottom: 35px;
+}
+
+.socio-capital-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.socio-capital-item {
+    padding: 24px 20px;
+    border-top: 4px solid var(--green);
+    border-radius: 0 0 var(--radius) var(--radius);
+    background: var(--bg-soft);
+}
+
+.socio-capital-item h3 {
+    margin-bottom: 12px;
+    color: var(--green-dark);
+}
+
+.socio-capital-item p {
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+.manifesto-download-section {
+    background: var(--green-light);
+}
+
+.manifesto-download-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.manifesto-download-card h2 {
+    margin: 10px 0 16px;
+    color: var(--green-dark);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.manifesto-download-card > p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.manifesto-pdf-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0 22px;
+    padding: 24px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+}
+
+.pdf-icon {
+    display: flex;
+    flex: 0 0 65px;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 75px;
+    border: 1px solid #f0caca;
+    border-radius: 8px;
+    background: #fff0f0;
+    color: var(--red);
+    font-weight: 900;
+}
+
+.pdf-description h3 {
+    margin-bottom: 7px;
+    color: var(--ink);
+}
+
+.pdf-description p {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 0.93rem;
+    line-height: 1.6;
+}
+
+.pdf-status {
+    display: inline-block;
+    color: var(--green-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.manifesto-pdf-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.manifesto-coming-soon {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.manifesto-pdf-viewer {
+    overflow: hidden;
+    margin-top: 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.manifesto-pdf-viewer iframe {
+    display: block;
+    border: 0;
+}
+
+.manifesto-closing {
+    max-width: 800px;
+    text-align: center;
+}
+
+.manifesto-closing h2 {
+    margin: 12px 0;
+    color: var(--green-dark);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.manifesto-closing > p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.manifesto-closing .manifesto-slogan {
+    margin: 25px 0;
+    color: var(--green-dark) !important;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+/* =====================================================
+   21. CAMPAIGN UPDATES / NEWSROOM
+===================================================== */
+
+.updates-hero {
+    padding: 95px 20px;
+    background: linear-gradient(120deg, var(--green-dark), var(--green));
+    color: var(--white);
+    text-align: center;
+}
+
+.updates-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.updates-hero .eyebrow {
+    color: #d9f2df;
+}
+
+.updates-hero h1 {
+    margin: 20px 0;
+    font-size: clamp(2.4rem, 5vw, 4.1rem);
+    line-height: 1.12;
+}
+
+.updates-hero h1 span {
+    color: #d9f2df;
+}
+
+.updates-hero p {
+    max-width: 740px;
+    margin: 0 auto 28px;
+    color: #f1fff4;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.updates-intro {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.updates-intro-text {
+    margin-top: 20px;
+    color: var(--muted);
+    line-height: 1.85;
+}
+
+.updates-featured {
+    overflow: hidden;
+    margin-top: 30px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.05);
+}
+
+.updates-featured-label {
+    padding: 12px 25px;
+    background: var(--green);
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.updates-featured-content {
+    padding: 35px;
+}
+
+.updates-featured-content h3 {
+    margin-bottom: 18px;
+    color: var(--green-dark);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.updates-featured-content p {
+    margin-bottom: 16px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.updates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.update-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.update-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.update-category {
+    padding: 13px 20px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.update-card-content {
+    padding: 25px;
+}
+
+.update-date {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.update-card h3 {
+    margin-bottom: 13px;
+    color: var(--green-dark);
+    font-size: 1.15rem;
+    line-height: 1.45;
+}
+
+.update-card p {
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+.update-status {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 7px 11px;
+    border-radius: 5px;
+    background: var(--bg-soft);
+    color: var(--green-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.updates-gallery-placeholder {
+    max-width: 650px;
+    margin: 35px auto 0;
+    padding: 55px 25px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    text-align: center;
+}
+
+.gallery-placeholder-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.updates-gallery-placeholder h3 {
+    margin-bottom: 12px;
+    color: var(--green-dark);
+}
+
+.updates-gallery-placeholder p {
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.press-section {
+    max-width: 850px;
+}
+
+.press-content {
+    padding: 35px;
+    border-left: 5px solid var(--green);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--bg-soft);
+}
+
+.press-content h2 {
+    color: var(--green-dark);
+}
+
+.press-content p {
+    margin-bottom: 16px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.press-content .btn {
+    margin-top: 10px;
+}
+
+.updates-closing {
+    max-width: 800px;
+    text-align: center;
+}
+
+.updates-closing h2 {
+    margin: 12px 0;
+    color: var(--green-dark);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.updates-closing > p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.updates-slogan {
+    margin: 25px 0;
+    color: var(--green-dark) !important;
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+
+/* =====================================================
+   22. SHARED FORMS
+===================================================== */
+
+.form-card {
+    width: 100%;
+    max-width: 640px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.field input,
+.field textarea,
+.field select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cdd8d1;
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    outline: 2px solid var(--green);
+    border-color: var(--green);
+}
+
+.form-note {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.form-status {
+    margin-top: 14px;
+    font-weight: 600;
+}
+
+/* =====================================================
+   23. SHARED CAMPAIGN FOOTER
+===================================================== */
+
+.site-footer {
+    width: 100%;
+    margin-top: 20px;
+    padding: 65px 0 25px;
+    background: #092d1a;
+    color: #ffffff;
+}
+
+.site-footer .container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* Supports both footer structures used across the pages */
+
+.site-footer .footer-grid,
+.site-footer .footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.site-footer .footer-content {
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.footer-brand {
+    min-width: 0;
+}
+
+.footer-logo {
+    width: auto;
+    max-width: 100px;
+    height: 65px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.footer-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #bfe6cd;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.footer-candidate-name,
+.footer-brand h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.footer-candidate-title {
+    margin-bottom: 12px;
+    color: #bfe6cd;
+    font-weight: 600;
+}
+
+.footer-mandate {
+    color: #d5e5da;
+    line-height: 1.7;
+}
+
+.footer-brand p {
+    color: #d5e5da;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.footer-slogan {
+    margin-top: 14px;
+    color: #bfe6cd;
+    font-weight: 700;
+}
+
+.footer-tagline {
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.site-footer h4 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.site-footer p {
+    margin-bottom: 12px;
+}
+
+.site-footer .footer-links,
+.site-footer .footer-connect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.site-footer .footer-links p,
+.site-footer .footer-connect p {
+    margin-bottom: 0;
+}
+
+.site-footer a {
+    color: #d5e5da;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.site-footer .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 22px 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #d5e5da;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.footer-bottom strong {
+    color: #ffffff;
+}
+
+.footer-bottom .footer-disclaimer {
+    margin-top: 10px;
+    color: #b5c9bc;
+    font-size: 13px;
+}
+
+/* =====================================================
+   24. CHAT WIDGET
+===================================================== */
+
+.chat-launch {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 200;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--green);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.chat-panel {
+    position: fixed;
+    right: 22px;
+    bottom: 88px;
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    width: 320px;
+    max-width: 90vw;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.chat-panel.open {
+    display: flex;
+}
+
+.chat-head {
+    padding: 14px 16px;
+    background: var(--green);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.chat-body {
+    max-height: 240px;
+    overflow-y: auto;
+    padding: 14px 16px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.chat-foot {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.chat-foot input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #cdd8d1;
+    border-radius: 8px;
+}
+
+/* =====================================================
+   25. PARTY LOGO SUPPORT
+===================================================== */
+
+.party-logo {
+    background-image: url("../img/party-logo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* =====================================================
+   26. ACCESSIBILITY AND INTERACTION STATES
+===================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--red);
+    outline-offset: 4px;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================================
+   27. RESPONSIVE TABLET LAYOUTS
+===================================================== */
+
+@media (max-width: 1000px) {
+    .site-header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .site-header nav {
+        justify-content: center;
+    }
+
+    .vision-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .pillars-grid,
+    .manifesto-priorities,
+    .updates-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .socio-capital-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pillar-image {
+        height: 200px;
+    }
+
+    .manifesto-delivery .pillars-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =====================================================
+   28. TABLET HERO AND CONTENT LAYOUTS
+===================================================== */
+
+@media (max-width: 860px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        margin-top: 15px;
+    }
+
+    #hero-portrait {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .cta-row {
+        justify-content: center;
+    }
+
+    .feedback-layout,
+    .volunteer-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .feedback-information,
+    .volunteer-information {
+        padding-top: 0;
+    }
+}
+
+/* =====================================================
+   29. MOBILE NAVIGATION
+===================================================== */
+
+@media (max-width: 700px) {
+    .site-header .container {
+        position: relative;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        min-height: 65px;
+        padding: 10px 16px;
+    }
+
+    .logo {
+        height: 44px;
+    }
+
+    .brand-text {
+        font-size: 0.85rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .site-header nav,
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0;
+        border-top: 1px solid var(--border);
+    }
+
+    .site-header nav.open,
+    .nav.open {
+        display: flex;
+    }
+
+    .site-header nav a,
+    .nav a {
+        display: block;
+        padding: 11px 8px;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.9rem;
+    }
+
+    .site-header nav a:last-child {
+        border-bottom: none;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .header-social {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header-social svg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+/* =====================================================
+   30. MOBILE PAGE LAYOUTS
+===================================================== */
+
+@media (max-width: 620px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.35rem;
+    }
+
+    #slogan {
+        font-size: 0.95rem;
+    }
+
+    .hero-image,
+    #hero-portrait {
+        width: 100%;
+    }
+
+    #hero-portrait {
+        max-width: 100%;
+    }
+
+    .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-row .btn {
+        width: 100%;
+    }
+
+    .about,
+    .manifesto,
+    .community,
+    .join {
+        padding: 45px 20px;
+    }
+
+    .why-running {
+        padding: 45px 18px;
+    }
+
+    .vision-grid,
+    .pillars-grid,
+    .manifesto-priorities,
+    .socio-capital-grid,
+    .updates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .manifesto-pillars {
+        padding: 55px 16px;
+    }
+
+    .pillar-card {
+        padding: 0;
+    }
+
+    .pillar-image {
+        height: 220px;
+    }
+
+    .pillar-content {
+        padding: 20px 18px 24px;
+    }
+
+    .pillar-content h3 {
+        font-size: 19px;
+    }
+
+    .updates-preview,
+    .contact-preview {
+        padding: 45px 20px;
+    }
+
+    .community-hero,
+    .contact-hero,
+    .feedback-hero,
+    .involvement-hero {
+        padding-top: 45px;
+    }
+
+    .cta-actions,
+    .manifesto-actions,
+    .updates-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-actions .btn,
+    .manifesto-actions .btn,
+    .updates-actions .btn {
+        width: 100%;
+    }
+
+    .contact-card {
+        align-items: stretch;
+    }
+
+    .contact-card .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .feedback-form-wrapper,
+    .volunteer-form-wrapper {
+        padding: 20px;
+    }
+
+    .feedback-closing .cta-actions,
+    .involvement-closing .cta-actions {
+        flex-direction: column;
+    }
+
+    .feedback-closing .cta-actions a,
+    .involvement-closing .cta-actions a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .manifesto-download-card {
+        padding: 25px 18px;
+    }
+
+    .manifesto-pdf-placeholder {
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .pdf-icon {
+        width: 52px;
+        height: 62px;
+        flex-basis: 52px;
+    }
+
+    .manifesto-pdf-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .manifesto-pdf-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .updates-featured-content,
+    .press-content {
+        padding: 24px 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .site-footer {
+        padding: 45px 0 20px;
+    }
+
+    .site-footer .footer-grid,
+    .site-footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-candidate-name,
+    .footer-brand h3 {
+        font-size: 22px;
+    }
+
+    .chat-launch {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chat-panel {
+        right: 15px;
+        bottom: 75px;
+    }
+
+    /* Manifesto hero mobile layout */
+
+    .manifesto-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        min-height: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .manifesto-hero .hero-text {
+        margin: 0 auto;
+    }
+
+    .manifesto-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .manifesto-hero .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .manifesto-hero .hero-image {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .manifesto-hero .hero-image img {
+        max-height: 480px;
+    }
+
+    .manifesto-hero .cta-row {
+        align-items: stretch;
+    }
+
+    /* Manifesto introduction */
+
+    .manifesto-introduction {
+        padding: 55px 20px;
+    }
+
+    .manifesto-intro-content p {
+        font-size: 0.95rem;
+    }
+
+    /* Six-point infographic */
+
+    .manifesto-pillars#six-point-agenda {
+        padding: 55px 16px;
+    }
+
+    .priority-item {
+        min-height: 145px;
+        padding: 24px 18px;
+    }
+
+    .priority-symbol {
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+    }
+
+    /* Photographic priority sections */
+
+    .manifesto-detail,
+    .manifesto-detail.reverse {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 55px 20px;
+    }
+
+    .manifesto-detail.reverse .manifesto-detail-image,
+    .manifesto-detail.reverse .manifesto-detail-content {
+        order: initial;
+    }
+
+    .manifesto-detail-image {
+        min-height: 240px;
+    }
+
+    .manifesto-detail-image img {
+        min-height: 240px;
+        max-height: 340px;
+    }
+
+    .manifesto-detail-content h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Delivery cards */
+
+    .manifesto-delivery {
+        padding: 55px 16px;
+    }
+
+    .manifesto-delivery .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .manifesto-delivery .pillar-card {
+        min-height: auto;
+        padding: 25px 22px;
+    }
+
+    /* Commitment and final CTA */
+
+    .manifesto-commitment {
+        padding: 55px 20px;
+    }
+
+    .commitment-content blockquote {
+        padding: 20px;
+    }
+
+    .manifesto-cta {
+        padding: 60px 20px;
+    }
+
+    .manifesto-cta .cta-row {
+        align-items: stretch;
+    }
+
+    /* Community event */
+
+    .event-feature {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 18px;
+    }
+
+    .event-feature-image,
+    .event-feature-image img {
+        min-height: 220px;
+    }
+
+    .event-video-section {
+        margin-top: 40px;
+    }
+}
+
+/* =====================================================
+   31. SMALL MOBILE DEVICES
+===================================================== */
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 1.55rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .vision-card {
+        padding: 20px;
+    }
+
+    .form-card {
+        padding: 18px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-candidate-name,
+    .footer-brand h3 {
+        font-size: 20px;
+    }
+
+    .manifesto-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .manifesto-detail-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .manifesto-download-card {
+        padding: 20px 15px;
+    }
+}
+
+/* =====================================================
+   END OF MAIN STYLESHEET
+===================================================== */
+
+/* =========================================================
+   32. ABOUT PAGE — CANDIDATE PROFILE
+   Refined portrait sizing and balanced biography layout
+========================================================= */
+
+/*
+   The About page profile uses:
+   .about-profile
+   .about-profile-image
+   .about-profile-image img
+   .about-profile-content
+
+   These rules are intentionally scoped to the biography profile.
+   They do not change the homepage hero or manifesto photography.
+*/
+
+.about-profile {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 45px auto 30px;
+    padding: 0 20px;
+}
+
+.about-profile-image {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--bg-soft);
+    box-shadow: 0 14px 34px rgba(0, 50, 25, 0.12);
+}
+
+.about-profile-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+}
+
+.about-profile-content {
+    min-width: 0;
+}
+
+.about-profile-content h1,
+.about-profile-content h2 {
+    margin-bottom: 16px;
+    color: var(--green-dark);
+    line-height: 1.18;
+}
+
+.about-profile-content h1 {
+    font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+    font-weight: 850;
+}
+
+.about-profile-content h2 {
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-weight: 800;
+}
+
+.about-profile-content p {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.about-profile-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Optional introductory heading and subtitle above the profile */
+
+.about-page-heading {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 38px 20px 10px;
+    text-align: center;
+}
+
+.about-page-heading h1 {
+    margin-bottom: 8px;
+    color: var(--ink);
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    font-size: clamp(2rem, 4.2vw, 3.2rem);
+    font-weight: 850;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.about-page-heading p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* If the profile image is used directly without a wrapper */
+
+.about-profile > img,
+.about-profile-image > img {
+    max-width: 100%;
+}
+
+/* Tablet: keep the portrait controlled while reducing the gap */
+
+@media (max-width: 860px) {
+    .about-profile {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 30px;
+        margin-top: 35px;
+    }
+
+    .about-profile-image {
+        max-width: 360px;
+        height: 430px;
+    }
+}
+
+/* Mobile: stack the portrait and biography cleanly */
+
+@media (max-width: 620px) {
+    .about-page-heading {
+        padding: 32px 18px 8px;
+    }
+
+    .about-page-heading h1 {
+        font-size: clamp(1.75rem, 7vw, 2.25rem);
+    }
+
+    .about-page-heading p {
+        font-size: 0.94rem;
+    }
+
+    .about-profile {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin: 25px auto 20px;
+        padding: 0 18px;
+    }
+
+    .about-profile-image {
+        width: 100%;
+        max-width: 360px;
+        height: 480px;
+    }
+
+    .about-profile-content {
+        width: 100%;
+    }
+
+    .about-profile-content h1 {
+        font-size: 1.85rem;
+    }
+
+    .about-profile-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-profile-content p {
+        font-size: 0.96rem;
+    }
+}
+
+/* Compact phones */
+
+@media (max-width: 380px) {
+    .about-profile-image {
+        max-width: 320px;
+        height: 380px;
+    }
+
+    .about-profile {
+        gap: 22px;
+    }
+}
+
+/* =========================================================
+   END OF ABOUT PAGE PROFILE OVERRIDES
+========================================================= */

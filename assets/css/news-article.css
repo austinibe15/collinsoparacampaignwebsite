@@ -1,0 +1,348 @@
+
+/* =====================================================
+   CAMPAIGN NEWS ARTICLE STYLES
+===================================================== */
+
+.article-hero {
+  background: linear-gradient(120deg, #073b20, #0a7d33);
+  color: #fff;
+  padding: 90px 20px;
+}
+
+.article-hero-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.article-hero .eyebrow {
+  color: #d8f4df;
+}
+
+.article-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.article-hero p {
+  max-width: 750px;
+  line-height: 1.8;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(240px, 0.8fr);
+  gap: 45px;
+  align-items: start;
+}
+
+.article-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+  color: #777;
+}
+
+.article-breadcrumb a {
+  color: #0a7d33;
+  text-decoration: none;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.article-category {
+  color: #0a7d33;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.article-date {
+  color: #888;
+  font-size: 0.82rem;
+}
+
+.article-title {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.article-featured-image {
+  margin: 0 0 30px;
+}
+
+.article-featured-image img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.article-featured-image figcaption {
+  color: #777;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.article-body {
+  color: #444;
+  line-height: 1.9;
+}
+
+.article-body p {
+  margin-bottom: 20px;
+}
+
+.article-body .article-lead {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.article-body h3 {
+  color: #173d27;
+  font-size: 1.35rem;
+  margin: 32px 0 12px;
+}
+
+.article-body blockquote {
+  margin: 30px 0;
+  padding: 22px 25px;
+  border-left: 4px solid #0a7d33;
+  background: #f2f8f3;
+  color: #245335;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.article-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 25px;
+  margin-top: 35px;
+}
+
+.article-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-sidebar-card {
+  background: #f5f8f5;
+  border: 1px solid #e5eee6;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.article-sidebar-card h3 {
+  margin: 15px 0;
+  font-size: 1.25rem;
+}
+
+.article-sidebar-card p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.related-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.related-article-card {
+  display: block;
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #222;
+  transition: 0.25s ease;
+}
+
+.related-article-card:hover {
+  border-color: #0a7d33;
+  transform: translateY(-4px);
+}
+
+.related-article-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+}
+
+.related-article-card span {
+  color: #0a7d33;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .article-hero {
+    padding: 65px 20px;
+  }
+
+  .article-sidebar,
+  .related-articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-footer {
+    flex-direction: column;
+  }
+}
+
+
+/* =====================================================
+   COMMUNITY ENGAGEMENT CARDS
+===================================================== */
+
+.community-engagement-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 35px 0;
+}
+
+.engagement-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.engagement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+.engagement-card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 128, 0, 0.09);
+    color: #008000;
+    border-radius: 12px;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.engagement-card h2 {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+    color: #17212b;
+}
+
+.engagement-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555f69;
+    margin-bottom: 12px;
+}
+
+.engagement-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   COMMUNITY HIGHLIGHT QUOTE
+===================================================== */
+
+.community-highlight-quote {
+    margin: 35px 0;
+    padding: 30px;
+    background: #f2f8f2;
+    border-left: 5px solid #008000;
+    border-radius: 10px;
+}
+
+.community-highlight-quote i {
+    display: block;
+    color: #008000;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.community-highlight-quote p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #26352b;
+    margin: 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE COMMUNITY CARDS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .community-engagement-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .engagement-card {
+        padding: 23px;
+    }
+
+    .community-highlight-quote {
+        padding: 23px;
+    }
+
+    .community-highlight-quote p {
+        font-size: 16px;
+    }
+
+}
+
+/* Prevent cropping of featured portraits */
+
+.article-featured-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.article-featured-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    object-position: center top;
+}

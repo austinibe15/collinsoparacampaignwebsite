@@ -1,0 +1,1470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Our Community | Comrade Collins Chimaobi Opara</title>
+
+  <meta
+    name="description"
+    content="Explore Comrade Collins Chimaobi Opara's community engagements, advocacy, and commitments to inclusion, opportunity, responsive representation and accountability in AMAC and Bwari."
+  />
+
+  <meta name="theme-color" content="#0a7d33" />
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <style>
+    :root {
+      --community-green: #087b35;
+      --community-green-dark: #075b2b;
+      --community-green-soft: #edf7f0;
+      --community-red: #d6283d;
+      --community-ink: #17231c;
+      --community-muted: #65736a;
+      --community-border: #e3ebe5;
+      --community-shadow: 0 12px 32px rgba(15, 55, 30, 0.08);
+    }
+
+    .community-page {
+      overflow: hidden;
+      color: var(--community-ink);
+    }
+
+    .community-page .container {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .community-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--community-green);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .community-eyebrow::before {
+      width: 30px;
+      height: 3px;
+      border-radius: 10px;
+      background: var(--community-red);
+      content: "";
+    }
+
+    /* =====================================================
+       1. COMMUNITY HERO
+    ===================================================== */
+
+    .community-hero {
+      padding: 76px 0 70px;
+      background:
+        radial-gradient(circle at 90% 12%, rgba(8, 123, 53, 0.09), transparent 30%),
+        linear-gradient(135deg, #f7fbf8 0%, #fff 58%, #f4faf5 100%);
+    }
+
+    .community-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+      align-items: center;
+      gap: clamp(35px, 6vw, 76px);
+    }
+
+    .community-hero-copy {
+      max-width: 650px;
+    }
+
+    .community-hero h1 {
+      max-width: 700px;
+      margin: 0 0 20px;
+      color: var(--community-green-dark);
+      font-size: clamp(2.35rem, 5vw, 4.15rem);
+      font-weight: 850;
+      letter-spacing: -0.045em;
+      line-height: 1.08;
+    }
+
+    .community-hero-lead {
+      max-width: 650px;
+      margin: 0 0 16px;
+      color: #43544a;
+      font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+      line-height: 1.85;
+    }
+
+    .community-hero-description {
+      max-width: 620px;
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 0.99rem;
+      line-height: 1.85;
+    }
+
+    .community-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 13px;
+      margin-top: 28px;
+    }
+
+    .community-hero-actions .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero photograph */
+
+    .community-hero-photo {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      border: 5px solid #fff;
+      border-radius: 22px;
+      background: #e8f1eb;
+      box-shadow: 0 20px 48px rgba(7, 91, 43, 0.15);
+    }
+
+    .community-hero-photo img {
+      display: block;
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .community-hero-photo figcaption {
+      padding: 15px 18px;
+      background: #fff;
+      color: var(--community-muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .community-photo-label {
+      display: inline-block;
+      margin-bottom: 5px;
+      color: var(--community-green);
+      font-size: 0.7rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* =====================================================
+       2. COMMUNITY COMMITMENTS
+    ===================================================== */
+
+    .community-commitments {
+      padding: 82px 0 88px;
+      background: #fff;
+    }
+
+    .community-section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .community-section-heading .community-eyebrow {
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .community-section-heading h2 {
+      margin: 0 0 14px;
+      color: var(--community-green-dark);
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.16;
+    }
+
+    .community-section-heading p {
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .community-commitment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .community-commitment-card {
+      min-width: 0;
+      min-height: 260px;
+      padding: 27px 25px 29px;
+      overflow: hidden;
+      border: 1px solid var(--community-border);
+      border-radius: 17px;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(15, 55, 30, 0.045);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .community-commitment-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(8, 123, 53, 0.28);
+      box-shadow: var(--community-shadow);
+    }
+
+    .community-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 22px;
+    }
+
+    .community-card-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--community-green-soft);
+      color: var(--community-green);
+    }
+
+    .community-card-icon svg {
+      width: 27px;
+      height: 27px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    .community-card-number {
+      color: #dce9df;
+      font-size: 1.55rem;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+    }
+
+    .community-commitment-card h3 {
+      margin: 0 0 11px;
+      color: var(--community-green-dark);
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .community-commitment-card p {
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 0.94rem;
+      line-height: 1.78;
+    }
+
+    /* =====================================================
+       3. COMMUNITY ENGAGEMENT APPROACH
+    ===================================================== */
+
+    .community-approach {
+      padding: 78px 0;
+      background: #f5f9f6;
+    }
+
+    .community-approach-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: start;
+      gap: clamp(35px, 6vw, 75px);
+    }
+
+    .community-approach-intro h2 {
+      margin: 0 0 16px;
+      color: var(--community-green-dark);
+      font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.17;
+    }
+
+    .community-approach-intro p {
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .community-principles {
+      display: grid;
+      gap: 15px;
+    }
+
+    .community-principle {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      align-items: start;
+      gap: 16px;
+      padding: 19px 20px;
+      border: 1px solid var(--community-border);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .community-principle-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--community-green-soft);
+      color: var(--community-green);
+      font-size: 0.9rem;
+      font-weight: 850;
+    }
+
+    .community-principle h3 {
+      margin: 1px 0 5px;
+      color: var(--community-green-dark);
+      font-size: 1.02rem;
+      font-weight: 800;
+    }
+
+    .community-principle p {
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 0.91rem;
+      line-height: 1.7;
+    }
+
+    /* =====================================================
+       4. TIV YOUTH COMMUNITY ENGAGEMENT
+    ===================================================== */
+
+    .community-engagement {
+      padding: 82px 0;
+      background: #fff;
+    }
+
+    .community-engagement-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(35px, 6vw, 70px);
+    }
+
+    .community-engagement-photo {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 19px;
+      background: #edf3ee;
+      box-shadow: var(--community-shadow);
+    }
+
+    .community-engagement-photo img {
+      display: block;
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .community-engagement-photo figcaption {
+      padding: 14px 17px;
+      background: #f8fbf8;
+      color: var(--community-muted);
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+
+    .community-engagement-copy h2 {
+      margin: 0 0 17px;
+      color: var(--community-green-dark);
+      font-size: clamp(1.9rem, 3.2vw, 2.65rem);
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.17;
+    }
+
+    .community-engagement-copy p:not(.community-eyebrow) {
+      margin: 0 0 15px;
+      color: var(--community-muted);
+      font-size: 0.98rem;
+      line-height: 1.85;
+    }
+
+    .community-engagement-note {
+      margin-top: 22px;
+      padding: 17px 19px;
+      border-left: 4px solid var(--community-green);
+      border-radius: 0 10px 10px 0;
+      background: var(--community-green-soft);
+      color: var(--community-green-dark);
+      font-size: 0.91rem;
+      line-height: 1.7;
+    }
+
+    /* =====================================================
+       5. UNITY MESSAGE
+    ===================================================== */
+
+    .community-unity {
+      position: relative;
+      padding: 82px 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,0.09), transparent 25%),
+        linear-gradient(125deg, #075b2b 0%, #087b35 60%, #0a7134 100%);
+      color: #fff;
+    }
+
+    .community-unity::after {
+      position: absolute;
+      top: -160px;
+      right: -90px;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .community-unity-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .community-unity .community-eyebrow {
+      color: #d7f0df;
+    }
+
+    .community-unity .community-eyebrow::before {
+      background: #f1c75b;
+    }
+
+    .community-unity h2 {
+      margin: 0 0 15px;
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 850;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+    }
+
+    .community-unity .community-unity-lead {
+      margin: 0 0 16px;
+      color: #e4f5e9;
+      font-size: 1.12rem;
+      font-weight: 650;
+      line-height: 1.7;
+    }
+
+    .community-unity-content > p:not(.community-eyebrow):not(.community-unity-lead) {
+      max-width: 760px;
+      margin: 0 auto 13px;
+      color: rgba(255,255,255,0.87);
+      font-size: 0.98rem;
+      line-height: 1.85;
+    }
+
+    .community-slogan {
+      display: inline-block;
+      margin: 24px 0 0;
+      padding: 13px 20px;
+      border: 1px solid rgba(255,255,255,0.32);
+      border-radius: 999px;
+      color: #fff;
+      font-size: clamp(0.92rem, 1.7vw, 1.08rem);
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    /* =====================================================
+       6. SOUTH AFRICA XENOPHOBIA ADVOCACY VIDEO
+    ===================================================== */
+
+    .community-advocacy {
+      padding: 82px 0;
+      background: #f5f9f6;
+    }
+
+    .community-advocacy-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      align-items: center;
+      gap: clamp(35px, 6vw, 65px);
+    }
+
+    .community-video-wrap {
+      overflow: hidden;
+      border: 1px solid var(--community-border);
+      border-radius: 18px;
+      background: #111;
+      box-shadow: var(--community-shadow);
+    }
+
+    .community-video-wrap video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #111;
+      object-fit: contain;
+    }
+
+    .community-video-caption {
+      padding: 13px 17px;
+      background: #fff;
+      color: var(--community-muted);
+      font-size: 0.83rem;
+      line-height: 1.6;
+    }
+
+    .community-advocacy-copy h2 {
+      margin: 0 0 16px;
+      color: var(--community-green-dark);
+      font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.17;
+    }
+
+    .community-advocacy-copy p:not(.community-eyebrow) {
+      margin: 0 0 15px;
+      color: var(--community-muted);
+      font-size: 0.98rem;
+      line-height: 1.85;
+    }
+
+    .community-advocacy-highlight {
+      margin-top: 20px;
+      padding: 17px 19px;
+      border-left: 4px solid var(--community-red);
+      border-radius: 0 10px 10px 0;
+      background: #fff;
+      color: #43544a;
+      font-size: 0.91rem;
+      line-height: 1.7;
+    }
+
+    /* =====================================================
+       7. COMMUNITY PARTICIPATION
+    ===================================================== */
+
+    .community-participation {
+      padding: 76px 0;
+      background: #fff;
+    }
+
+    .community-participation-heading {
+      max-width: 700px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .community-participation-heading h2 {
+      margin: 0 0 12px;
+      color: var(--community-green-dark);
+      font-size: clamp(1.8rem, 3.3vw, 2.55rem);
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.2;
+    }
+
+    .community-participation-heading p {
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .community-participation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .community-participation-item {
+      padding: 24px 22px;
+      border: 1px solid var(--community-border);
+      border-radius: 15px;
+      background: #fbfdfb;
+      text-align: center;
+    }
+
+    .community-participation-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--community-green-dark);
+      font-size: 1rem;
+    }
+
+    .community-participation-item p {
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 0.91rem;
+      line-height: 1.7;
+    }
+
+    /* =====================================================
+       8. FINAL CALL TO ACTION
+    ===================================================== */
+
+    .community-cta {
+      padding: 72px 0;
+      background: #f1f7f2;
+    }
+
+    .community-cta-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      padding: clamp(28px, 5vw, 48px);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: var(--community-shadow);
+    }
+
+    .community-cta-copy {
+      max-width: 650px;
+    }
+
+    .community-cta-copy h2 {
+      margin: 0 0 12px;
+      color: var(--community-green-dark);
+      font-size: clamp(1.75rem, 3vw, 2.4rem);
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.2;
+    }
+
+    .community-cta-copy p:not(.community-eyebrow) {
+      margin: 0;
+      color: var(--community-muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .community-cta .cta-actions {
+      display: flex;
+      flex: 0 0 auto;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .community-cta .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    /* =====================================================
+       9. RESPONSIVE DESIGN
+    ===================================================== */
+
+    @media (max-width: 900px) {
+      .community-hero-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.85fr);
+        gap: 30px;
+      }
+
+      .community-hero-photo img {
+        height: 360px;
+      }
+
+      .community-commitment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .community-approach-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .community-engagement-layout,
+      .community-advocacy-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .community-engagement-photo img {
+        height: 340px;
+      }
+
+      .community-cta-panel {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .community-page .container {
+        width: min(100% - 36px, 520px);
+      }
+
+      .community-hero {
+        padding: 50px 0 48px;
+      }
+
+      .community-hero-layout,
+      .community-engagement-layout,
+      .community-advocacy-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .community-hero h1 {
+        font-size: clamp(2.15rem, 9vw, 2.85rem);
+      }
+
+      .community-hero-lead {
+        font-size: 1rem;
+      }
+
+      .community-hero-photo img {
+        height: 340px;
+      }
+
+      .community-commitments,
+      .community-approach,
+      .community-engagement,
+      .community-advocacy,
+      .community-participation {
+        padding: 58px 0;
+      }
+
+      .community-section-heading {
+        margin-bottom: 30px;
+        text-align: left;
+      }
+
+      .community-section-heading .community-eyebrow {
+        justify-content: flex-start;
+      }
+
+      .community-commitment-grid,
+      .community-participation-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .community-commitment-card {
+        min-height: 0;
+        padding: 23px 21px;
+      }
+
+      .community-card-top {
+        margin-bottom: 16px;
+      }
+
+      .community-engagement-photo img {
+        height: 300px;
+      }
+
+      .community-unity {
+        padding: 62px 0;
+      }
+
+      .community-unity-content {
+        text-align: left;
+      }
+
+      .community-slogan {
+        border-radius: 12px;
+      }
+
+      .community-participation-item {
+        text-align: left;
+      }
+
+      .community-cta {
+        padding: 52px 0;
+      }
+
+      .community-cta-panel {
+        padding: 27px 22px;
+        border-radius: 17px;
+      }
+
+      .community-cta .cta-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .community-cta .cta-actions .btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .community-page .container {
+        width: calc(100% - 30px);
+      }
+
+      .community-hero h1 {
+        font-size: 2rem;
+      }
+
+      .community-hero-photo img {
+        height: 280px;
+      }
+
+      .community-commitment-card {
+        padding: 21px 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .community-commitment-card {
+        transition: none;
+      }
+
+      .community-commitment-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SHARED HEADER -->
+
+  <header class="site-header">
+    <div id="site-header"></div>
+  </header>
+
+  <main class="community-page">
+
+    <!-- =====================================================
+         1. COMMUNITY HERO - OHANAEZE PHOTO
+    ====================================================== -->
+
+    <section class="community-hero" aria-labelledby="community-page-title">
+
+      <div class="container">
+
+        <div class="community-hero-layout">
+
+          <div class="community-hero-copy">
+
+            <p class="community-eyebrow">
+              Our Commitment to the People
+            </p>
+
+            <h1 id="community-page-title">
+              Building a Constituency Where Everyone Belongs
+            </h1>
+
+            <p class="community-hero-lead">
+              AMAC and Bwari are home to people from different
+              communities, backgrounds, professions, and generations.
+              Our shared future depends on inclusion, opportunity,
+              accountability, and development that reaches every ward.
+            </p>
+
+            <p class="community-hero-description">
+              Comrade Collins Chimaobi Opara's community vision is
+              built around listening to residents, supporting local
+              opportunities, strengthening representation, and
+              promoting practical solutions to the challenges facing
+              our constituency.
+            </p>
+
+            <div class="community-hero-actions">
+
+              <a href="feedback.html" class="btn btn-primary">
+                Share Your Voice
+              </a>
+
+              <a href="get-involved.html" class="btn btn-secondary">
+                Get Involved
+              </a>
+
+            </div>
+
+          </div>
+
+          <figure class="community-hero-photo">
+
+            <img
+              src="../assets/img/collins-ohanaeze-engagement.jpg"
+              alt="Comrade Collins Chimaobi Opara during an engagement with members of the Ohanaeze Ndigbo community."
+              loading="eager"
+              fetchpriority="high"
+            />
+
+            <figcaption>
+              <span class="community-photo-label">
+                Community Engagement
+              </span>
+              Engagement with members of the Ohanaeze Ndigbo community.
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         2. SIX COMMUNITY COMMITMENTS
+    ====================================================== -->
+
+    <section class="community-commitments"
+      aria-labelledby="community-commitments-title">
+
+      <div class="container">
+
+        <div class="community-section-heading">
+
+          <p class="community-eyebrow">
+            A Clear Set of Priorities
+          </p>
+
+          <h2 id="community-commitments-title">
+            Our Community Commitments
+          </h2>
+
+          <p>
+            Six priority areas for a more inclusive, responsive,
+            and prosperous AMAC/Bwari Federal Constituency.
+          </p>
+
+        </div>
+
+        <div class="community-commitment-grid">
+
+          <article class="community-commitment-card">
+
+            <div class="community-card-top">
+              <span class="community-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/>
+                  <path d="M8 12h8M8 8.5h5"/>
+                </svg>
+              </span>
+              <span class="community-card-number">01</span>
+            </div>
+
+            <h3>Community Engagement</h3>
+
+            <p>
+              Promote regular ward-level consultations, listening
+              sessions, and open communication with residents,
+              community associations, traditional institutions,
+              and local stakeholders.
+            </p>
+
+          </article>
+
+          <article class="community-commitment-card">
+
+            <div class="community-card-top">
+              <span class="community-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 10h18M5 10v10h14V10M4 10l1.5-6h13L20 10"/>
+                  <path d="M9 20v-6h6v6M8 7h.01M12 7h.01M16 7h.01"/>
+                </svg>
+              </span>
+              <span class="community-card-number">02</span>
+            </div>
+
+            <h3>Small Business Support</h3>
+
+            <p>
+              Advocate policies and programmes that support small
+              businesses, local traders, artisans, entrepreneurs,
+              and other contributors to the constituency's economy.
+            </p>
+
+          </article>
+
+          <article class="community-commitment-card">
+
+            <div class="community-card-top">
+              <span class="community-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 2.8 8 12 13l9.2-5L12 3Z"/>
+                  <path d="M6.5 11v5.2c3.5 2.8 7.5 2.8 11 0V11M21.2 8v6"/>
+                  <path d="M21.2 14.2c-1.2 1.1-1.2 2.4 0 3.4"/>
+                </svg>
+              </span>
+              <span class="community-card-number">03</span>
+            </div>
+
+            <h3>Youth Skills and Opportunities</h3>
+
+            <p>
+              Champion access to vocational training, digital skills,
+              entrepreneurship support, career development, and
+              opportunities that help young people build sustainable
+              livelihoods.
+            </p>
+
+          </article>
+
+          <article class="community-commitment-card">
+
+            <div class="community-card-top">
+              <span class="community-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/>
+                  <path d="M9 10h.01M15 10h.01M12 10h.01"/>
+                </svg>
+              </span>
+              <span class="community-card-number">04</span>
+            </div>
+
+            <h3>Infrastructure and Public Services</h3>
+
+            <p>
+              Advocate improved roads, reliable water access,
+              sanitation, healthcare facilities, education,
+              and other essential public services across the
+              constituency.
+            </p>
+
+          </article>
+
+          <article class="community-commitment-card">
+
+            <div class="community-card-top">
+              <span class="community-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="9" cy="8" r="3"/>
+                  <circle cx="17" cy="9" r="2.3"/>
+                  <path d="M3.5 20c.4-4 2.2-6 5.5-6s5.1 2 5.5 6M15 14.5c2.9-.2 4.7 1.5 5.2 4.5"/>
+                </svg>
+              </span>
+              <span class="community-card-number">05</span>
+            </div>
+
+            <h3>Inclusive Representation</h3>
+
+            <p>
+              Promote fairness, equal participation, and a stronger
+              voice for non-indigenes and other underrepresented
+              groups in the development and governance of AMAC and Bwari.
+            </p>
+
+          </article>
+
+          <article class="community-commitment-card">
+
+            <div class="community-card-top">
+              <span class="community-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 20 6v5c0 5-3.4 8.2-8 10-4.6-1.8-8-5-8-10V6l8-3Z"/>
+                  <path d="m8.5 12 2.2 2.2 4.8-5"/>
+                </svg>
+              </span>
+              <span class="community-card-number">06</span>
+            </div>
+
+            <h3>Transparency and Accountability</h3>
+
+            <p>
+              Encourage transparent communication about constituency
+              priorities, legislative activities, public projects,
+              and progress made on commitments to the people.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         3. COMMUNITY ENGAGEMENT APPROACH
+    ====================================================== -->
+
+    <section class="community-approach"
+      aria-labelledby="community-approach-title">
+
+      <div class="container">
+
+        <div class="community-approach-layout">
+
+          <div class="community-approach-intro">
+
+            <p class="community-eyebrow">
+              From Commitment to Action
+            </p>
+
+            <h2 id="community-approach-title">
+              Representation Must Begin With Listening
+            </h2>
+
+            <p>
+              Meaningful representation requires more than promises.
+              It starts with understanding the everyday concerns of
+              residents, carrying their priorities into public
+              discussions, and communicating progress openly.
+            </p>
+
+          </div>
+
+          <div class="community-principles">
+
+            <article class="community-principle">
+              <span class="community-principle-number">01</span>
+              <div>
+                <h3>Listen to Residents</h3>
+                <p>
+                  Encourage accessible channels for residents,
+                  community groups and local stakeholders to express
+                  their concerns and priorities.
+                </p>
+              </div>
+            </article>
+
+            <article class="community-principle">
+              <span class="community-principle-number">02</span>
+              <div>
+                <h3>Represent Community Interests</h3>
+                <p>
+                  Promote fair consideration of community needs in
+                  constituency engagement, advocacy and legislative
+                  representation.
+                </p>
+              </div>
+            </article>
+
+            <article class="community-principle">
+              <span class="community-principle-number">03</span>
+              <div>
+                <h3>Communicate Progress</h3>
+                <p>
+                  Support clear public communication about priorities,
+                  activities, challenges and progress on commitments.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         4. TIV YOUTH ENGAGEMENT
+    ====================================================== -->
+
+    <section class="community-engagement"
+      aria-labelledby="community-engagement-title">
+
+      <div class="container">
+
+        <div class="community-engagement-layout">
+
+          <figure class="community-engagement-photo">
+
+            <img
+              src="../assets/img/collins-tiv-youth-support.jpg"
+              alt="Comrade Collins Chimaobi Opara during an engagement with Tiv youth."
+              loading="lazy"
+            />
+
+            <figcaption>
+              Engagement with Tiv youth and expressions of community support.
+            </figcaption>
+
+          </figure>
+
+          <div class="community-engagement-copy">
+
+            <p class="community-eyebrow">
+              Inclusion in Practice
+            </p>
+
+            <h2 id="community-engagement-title">
+              Building Bridges Across Communities
+            </h2>
+
+            <p>
+              A constituency as diverse as AMAC and Bwari needs
+              leadership that values dialogue, mutual respect,
+              and cooperation across different communities.
+            </p>
+
+            <p>
+              Engagement with groups such as Tiv youth reflects
+              the importance of listening to different voices
+              and building relationships across cultural and
+              community lines.
+            </p>
+
+            <div class="community-engagement-note">
+              A stronger constituency is built when people from
+              different backgrounds have the opportunity to
+              participate, contribute, and be heard.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         5. UNITY MESSAGE
+    ====================================================== -->
+
+    <section class="community-unity"
+      aria-labelledby="community-unity-title">
+
+      <div class="container">
+
+        <div class="community-unity-content">
+
+          <p class="community-eyebrow">
+            Our Shared Identity
+          </p>
+
+          <h2 id="community-unity-title">
+            One Constituency, One Shared Future
+          </h2>
+
+          <p class="community-unity-lead">
+            Our diversity should be a source of strength, not division.
+          </p>
+
+          <p>
+            Whether indigenes or non-indigenes, young or old, traders,
+            professionals, workers, or entrepreneurs, everyone has a
+            role to play in building a better AMAC and Bwari.
+          </p>
+
+          <p>
+            The goal is a constituency where residents are heard,
+            opportunities are accessible, public resources are
+            responsibly managed, and representation reflects the
+            interests of the people.
+          </p>
+
+          <h3 class="community-slogan">
+            Papa, Mama, Pikin — Together for a Better AMAC/Bwari.
+          </h3>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         6. SOUTH AFRICA XENOPHOBIA ADVOCACY VIDEO
+    ====================================================== -->
+
+    <section class="community-advocacy"
+      aria-labelledby="community-advocacy-title">
+
+      <div class="container">
+
+        <div class="community-advocacy-layout">
+
+          <div class="community-video-wrap">
+
+            <video
+              controls
+              preload="metadata"
+              playsinline
+              aria-label="Video of Comrade Collins Chimaobi Opara speaking against xenophobia and the mistreatment of Nigerians in South Africa."
+            >
+              <source
+                src="../assets/video/collins-xenophobia-advocacy-south-africa.mp4"
+                type="video/mp4"
+              />
+
+              Your browser does not support HTML5 video.
+            </video>
+
+            <div class="community-video-caption">
+              Advocacy against xenophobia and the mistreatment of Nigerians in South Africa.
+            </div>
+
+          </div>
+
+          <div class="community-advocacy-copy">
+
+            <p class="community-eyebrow">
+              Advocacy Beyond the Constituency
+            </p>
+
+            <h2 id="community-advocacy-title">
+              Standing for the Dignity and Protection of Nigerians
+            </h2>
+
+            <p>
+              The dignity, safety, and rights of Nigerians deserve
+              to be respected wherever they live, work, or travel.
+              Speaking against xenophobia is part of the wider
+              responsibility to promote peaceful coexistence
+              and respect for human dignity.
+            </p>
+
+            <p>
+              This advocacy video documents Comrade Collins
+              Chimaobi Opara's position on xenophobia and the
+              treatment of Nigerians in South Africa.
+            </p>
+
+            <div class="community-advocacy-highlight">
+              Peaceful coexistence, mutual respect, and the protection
+              of human dignity should remain shared responsibilities.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         7. COMMUNITY PARTICIPATION
+    ====================================================== -->
+
+    <section class="community-participation"
+      aria-labelledby="community-participation-title">
+
+      <div class="container">
+
+        <div class="community-participation-heading">
+
+          <p class="community-eyebrow">
+            Your Voice Matters
+          </p>
+
+          <h2 id="community-participation-title">
+            A Better Constituency Takes Everyone
+          </h2>
+
+          <p>
+            Residents understand their communities best. Your
+            experiences and ideas can help identify the issues
+            that deserve attention.
+          </p>
+
+        </div>
+
+        <div class="community-participation-grid">
+
+          <article class="community-participation-item">
+            <strong>Share Your Concerns</strong>
+            <p>
+              Tell us about the challenges affecting your street,
+              ward or community.
+            </p>
+          </article>
+
+          <article class="community-participation-item">
+            <strong>Suggest Practical Ideas</strong>
+            <p>
+              Share solutions and priorities that could improve
+              everyday life for residents.
+            </p>
+          </article>
+
+          <article class="community-participation-item">
+            <strong>Take Part in the Conversation</strong>
+            <p>
+              Participate in constructive discussions about
+              inclusion, opportunity and development.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         8. FINAL CALL TO ACTION
+    ====================================================== -->
+
+    <section class="community-cta"
+      aria-labelledby="community-cta-title">
+
+      <div class="container">
+
+        <div class="community-cta-panel">
+
+          <div class="community-cta-copy">
+
+            <p class="community-eyebrow">
+              Be Part of the Conversation
+            </p>
+
+            <h2 id="community-cta-title">
+              Help Shape the Priorities That Matter
+            </h2>
+
+            <p>
+              Your voice, ideas, and community experiences matter.
+              Join the conversation and help shape the priorities
+              that matter to residents across AMAC and Bwari.
+            </p>
+
+          </div>
+
+          <div class="cta-actions">
+
+            <a href="feedback.html" class="btn btn-primary">
+              Share Your Feedback
+            </a>
+
+            <a href="get-involved.html" class="btn btn-secondary">
+              Get Involved
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SHARED FOOTER -->
+
+  <footer class="site-footer">
+    <div id="site-footer"></div>
+  </footer>
+
+  <!-- SHARED JAVASCRIPT -->
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/chat-widget.js"></script>
+
+</body>
+</html>
