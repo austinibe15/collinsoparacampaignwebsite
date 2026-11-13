@@ -1,0 +1,43 @@
+﻿
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/"
+  to = "/public/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/about.html"
+  to = "/public/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/manifesto.html"
+  to = "/public/manifesto.html"
+  status = 200
+
+[[redirects]]
+  from = "/community.html"
+  to = "/public/community.html"
+  status = 200
+
+[[redirects]]
+  from = "/get-involved.html"
+  to = "/public/get-involved.html"
+  status = 200
+
+[[redirects]]
+  from = "/updates.html"
+  to = "/public/updates.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/public/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/feedback.html"
+  to = "/public/feedback.html"
+  status = 200
