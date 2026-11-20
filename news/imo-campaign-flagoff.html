@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +35,9 @@
   />
 
   <style>
-    /* MAIN ARTICLE */
-
     .campaign-article {
       width: min(1100px, 92%);
       margin: 40px auto 70px;
-      background: transparent;
     }
 
     .campaign-breadcrumb {
@@ -56,7 +52,6 @@
     .campaign-article-header {
       max-width: 900px;
       margin-bottom: 28px;
-      background: transparent;
     }
 
     .campaign-category {
@@ -66,13 +61,11 @@
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
-      background: transparent;
     }
 
     .campaign-article-header h1 {
       margin: 0 0 18px;
       line-height: 1.2;
-      background: transparent;
     }
 
     .campaign-meta {
@@ -81,210 +74,97 @@
       gap: 18px;
       font-size: 14px;
       margin-bottom: 20px;
-      background: transparent;
     }
 
     .campaign-meta span {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      background: transparent;
     }
 
-    /* FEATURED IMAGE */
-
     .campaign-featured-image {
-      display: block;
-      width: 100%;
       margin: 25px 0 35px;
-      padding: 0;
-      background: transparent !important;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      overflow: visible;
     }
 
     .campaign-featured-image img {
       display: block;
       width: 100%;
-      height: auto;
-      max-height: none;
-      object-fit: initial;
-      object-position: center;
-      background: transparent !important;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      filter: none;
-      outline: none;
+      max-height: 620px;
+      object-fit: contain;
+      background: #000;
+      border-radius: 12px;
     }
 
     .campaign-featured-image figcaption {
-      display: block;
       margin-top: 10px;
-      padding: 0;
       font-size: 13px;
-      line-height: 1.6;
       text-align: center;
-      color: inherit;
-      background: transparent !important;
-      border: none;
-      box-shadow: none;
-      text-decoration: none;
     }
-
-    /* ARTICLE TEXT */
 
     .campaign-article-body {
       max-width: 850px;
       margin: 0 auto;
-      padding: 0;
       font-size: 16px;
       line-height: 1.85;
-      background: transparent !important;
-    }
-
-    .campaign-article-body p {
-      margin-bottom: 16px;
-      background: transparent !important;
-      background-color: transparent !important;
-      box-shadow: none !important;
-      text-decoration: none;
     }
 
     .campaign-article-body h2 {
       margin-top: 32px;
       margin-bottom: 12px;
-      background: transparent !important;
-      background-color: transparent !important;
-      box-shadow: none !important;
     }
-
-    /* REMOVE TEXT HIGHLIGHTING */
-
-    .campaign-article p,
-    .campaign-article h1,
-    .campaign-article h2,
-    .campaign-article h3,
-    .campaign-article span,
-    .campaign-article strong,
-    .campaign-article em,
-    .campaign-article mark,
-    .campaign-article figcaption,
-    .campaign-article a {
-      background: transparent !important;
-      background-color: transparent !important;
-      background-image: none !important;
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-
-    .campaign-article mark {
-      color: inherit !important;
-      padding: 0 !important;
-    }
-
-    .campaign-article ::selection {
-      background: rgba(10, 125, 51, 0.2);
-      color: inherit;
-    }
-
-    /* PHOTO GALLERY */
 
     .campaign-gallery {
       margin-top: 50px;
-      background: transparent !important;
     }
 
     .campaign-gallery h2 {
       margin-bottom: 10px;
-      background: transparent !important;
     }
 
     .campaign-gallery-intro {
       margin-bottom: 25px;
-      background: transparent !important;
     }
 
     .campaign-gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
-      background: transparent !important;
     }
 
     .campaign-gallery figure {
       margin: 0;
-      padding: 0;
       overflow: hidden;
-      background: transparent !important;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
+      border-radius: 10px;
     }
 
     .campaign-gallery img {
       display: block;
       width: 100%;
-      height: auto;
-      max-height: none;
-      object-fit: initial;
-      background: transparent !important;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      filter: none;
-      transition: none;
+      height: 300px;
+      object-fit: contain;
+      background: #000;
+      transition: transform 0.3s ease;
     }
 
     .campaign-gallery figure:hover img {
-      transform: none;
+      transform: scale(1.025);
     }
 
     .campaign-gallery figcaption {
-      display: block;
-      padding: 10px 0;
-      margin: 0;
+      padding: 12px;
       font-size: 13px;
-      line-height: 1.6;
-      color: inherit;
-      background: transparent !important;
-      border: none;
-      box-shadow: none;
-      text-decoration: none;
     }
-
-    /* ARTICLE FOOTER LINKS */
 
     .campaign-article-footer {
       max-width: 850px;
       margin: 40px auto 0;
       padding-top: 25px;
       border-top: 1px solid rgba(128, 128, 128, 0.3);
-      background: transparent !important;
-    }
-
-    .campaign-article-footer p {
-      background: transparent !important;
     }
 
     .campaign-article-footer a {
       margin-right: 18px;
     }
-
-    /* REMOVE UNWANTED DECORATIVE BACKGROUNDS */
-
-    .campaign-article figure,
-    .campaign-article figcaption,
-    .campaign-article p,
-    .campaign-article h1,
-    .campaign-article h2,
-    .campaign-article div {
-      text-shadow: none;
-    }
-
-    /* MOBILE DISPLAY */
 
     @media (max-width: 650px) {
       .campaign-article {
@@ -297,23 +177,12 @@
       }
 
       .campaign-gallery img {
-        width: 100%;
         height: auto;
-        max-height: none;
+        max-height: 380px;
       }
 
       .campaign-meta {
         gap: 10px;
-      }
-
-      .campaign-featured-image img {
-        width: 100%;
-        height: auto;
-      }
-
-      .campaign-article-footer a {
-        display: inline-block;
-        margin: 5px 12px 5px 0;
       }
     }
   </style>
@@ -502,30 +371,6 @@
               loading="lazy"
             />
             <figcaption>Party representatives and attendees at the event.</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="../assets/img/comrade-Ajero.jpg"
-              alt="Comrade Collins Chimaobi Opara with Comrade Joe Ajaero, President of the Nigeria Labour Congress."
-              loading="lazy"
-            />
-            <figcaption>
-              Comrade Collins Chimaobi Opara with Comrade Joe Ajaero,
-              President of the Nigeria Labour Congress (NLC).
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="../assets/img/comrade-Rochas Okorocha.jpg"
-              alt="Comrade Collins Chimaobi Opara with Owelle Rochas Ethelbert Anayo Okorocha, former Governor of Imo State."
-              loading="lazy"
-            />
-            <figcaption>
-              Comrade Collins Chimaobi Opara with Owelle Rochas Ethelbert
-              Anayo Okorocha, OON, former Governor of Imo State.
-            </figcaption>
           </figure>
 
         </div>
